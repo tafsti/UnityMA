@@ -22,6 +22,8 @@ public class movehero : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
             transform.Rotate(Vector3.down, 30 * Time.deltaTime);
 
+       
+
         
 
 
