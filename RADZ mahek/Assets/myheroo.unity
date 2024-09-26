@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 1145482877}
   - component: {fileID: 1145482881}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -947,6 +947,7 @@ Transform:
   - {fileID: 1580310856}
   - {fileID: 2010658002}
   - {fileID: 234559375}
+  - {fileID: 2046095862}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1145482881
@@ -1482,12 +1483,12 @@ Transform:
   m_GameObject: {fileID: 2046095858}
   serializedVersion: 2
   m_LocalRotation: {x: 0.17077379, y: 0.06600294, z: 0.96282995, w: 0.19859143}
-  m_LocalPosition: {x: 0.188, y: 0.091, z: 0.358}
-  m_LocalScale: {x: 0.25045, y: 0.2731, z: 0.055949997}
+  m_LocalPosition: {x: 0.19703738, y: 0.095799565, z: 0.41323325}
+  m_LocalScale: {x: 0.2655217, y: 0.28853625, z: 0.06490726}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1988197011}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1145482880}
   m_LocalEulerAnglesHint: {x: -3.398, y: 20.836, z: 156.067}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1496,4 +1497,3 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 1145482880}
-  - {fileID: 2046095862}

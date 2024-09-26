@@ -10,18 +10,18 @@ public class physicsscript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if (rb == null)
+        if (rb != null)
             print("Found Rigid Body");
         else
-            print("could not find rigid body");
+            print("Could not find Rigid Body");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
             rb.AddExplosionForce(500,
-                transform.position + new Vector3(0, -1, 0), 2);
+                transform.position + new Vector3(0, -1, -1), 2);
     }
 }
