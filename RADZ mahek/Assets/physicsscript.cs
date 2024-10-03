@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,12 @@ using UnityEngine;
 public class physicsscript : MonoBehaviour
 {
     private Rigidbody rb;
+
+    internal void kick()
+    {
+        print("Found Rigid Body");
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,4 +31,6 @@ public class physicsscript : MonoBehaviour
             rb.AddExplosionForce(500,
                 transform.position + new Vector3(0, -1, -1), 2);
     }
+
+
 }
