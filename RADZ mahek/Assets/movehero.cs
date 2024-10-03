@@ -35,4 +35,13 @@ public class movehero : MonoBehaviour
             transform.position += Vector3.back * Time.deltaTime;
     
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print(collision.gameObject.name);
+        physicsscript objectihit = collision.gameObject.GetComponent<physicsscript>();
+        objectihit.kick();
+
+
+    }
 }
