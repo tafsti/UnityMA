@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class movehero : MonoBehaviour
 {
+    
+    public GameObject snowBallCloneTemplate; 
     Animator animator;
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         animator = GetComponent<Animator>();
         if (animator == null)
             print("Could not find Animator Component");
@@ -19,6 +21,14 @@ public class movehero : MonoBehaviour
     void Update()
     {
         animator.SetBool("isrunning", false);
+
+         if(Input.GetMouseButtonDown(0))
+        {
+           GameObject newSnowballGO = Instantiate(snowBallCloneTemplate, transform.position + transform.forward + Vector3.up, Quaternion.identity);
+            snowballscript myNewSnowball = newSnowballGO.GetComponent<snowballscript>();
+            myNewSnowball.throwSnowball(transform);
+        }
+
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += transform.forward * Time.deltaTime;
