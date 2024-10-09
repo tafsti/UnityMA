@@ -3,17 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class physicsscript : MonoBehaviour
+public class snowballscript : MonoBehaviour
 {
     Rigidbody rb;
-
-    internal void kick()
-    {
-        throw new NotImplementedException();
-    }
-
-    // Start is called before the first frame update
-    void Start()
+    internal void throwSnowball(Transform thrower)
     {
         rb = GetComponent<Rigidbody>();
         if (rb != null)
@@ -21,15 +14,18 @@ public class physicsscript : MonoBehaviour
         else
             print("Could not find Rigid Body");
 
+        rb.AddExplosionForce(500, thrower.position, 3);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-            rb.AddExplosionForce(5000,
-                transform.position + new Vector3(0, -1, -1), 2);
+        
     }
-
-
 }
