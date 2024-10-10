@@ -43,15 +43,21 @@ public class movehero : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
             transform.position += Vector3.back * Time.deltaTime;
-    
+            
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         print(collision.gameObject.name);
-        physicsscript objectihit = collision.gameObject.GetComponent<physicsscript>();
-        objectihit.kick();
 
+
+
+        football myFootball = collision.gameObject.GetComponent<football>();
+        if (myFootball != null)
+        {
+            myFootball.Kick();
+        }
 
     }
 }
