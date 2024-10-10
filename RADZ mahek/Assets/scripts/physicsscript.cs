@@ -7,10 +7,8 @@ public class physicsscript : MonoBehaviour
 {
     Rigidbody rb;
 
-    internal void kick()
-    {
-        throw new NotImplementedException();
-    }
+ 
+    
 
     // Start is called before the first frame update
     void Start()
